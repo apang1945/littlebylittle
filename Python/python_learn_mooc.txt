@@ -1,4 +1,8 @@
-```
+实例1(圆面积计算)
+Ps:两种保留位数的方法
+    1."{:.2f}".format(a)
+    2.'%.2f' %a
+'''
 r = 25
 area = 3.1415 * r * r
 print(area)
@@ -7,8 +11,43 @@ print("{:.2f}".format(area))
 1963.44
 print('%.2f' %area)
 1963.44
-```
-实例1(圆面积计算)
-Ps:两种保留位数的方法
-    1."{:.2f}".format(a)
-    2.'%.2f' %a
+'''
+实例2(同切圆绘制)
+Ps:要注意数据的类型，input输入的是整型，在绘制圆的时候需要Π的引入，Π是无理数，所以要进行格式转换
+    eg:float(a)
+'''
+size = input('请输入画笔的粗细:')
+a = input('请输入所要画的圆的半径:')
+r = float(a)
+import turtle
+turtle.pensize(size)
+turtle.circle(r)
+turtle.circle(r * 4)
+turtle.circle(r * 8)
+turtle.circle(r * 16)
+'''
+实例3(五角星绘制)
+Ps:
+^_^
+待补充
+^~^
+、、、
+from turtle import *
+color('red' , 'red')
+begin_fill()
+for i in range(5):
+    fd(200)
+    rt(144)
+
+end_fill()
+、、、
+Python第一段代码(包含代码解读):
+TempStr = input('请输入带有符号的温度值：')#
+if TempStr[-1] in ['F','f']:
+    C = (eval(TempStr[0 : -1]) - 3255)/1.8
+    print('转换后的温度是{:.2f}C'.format(C))
+elif TempStr[-1] in ['C','c']:
+    F = 1.8*eval(TempStr[0 : -1]) + 32
+    print('转换后的温度是{:.2f}F'.format(F))
+else:
+    print('输入格式错误')
