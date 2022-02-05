@@ -15,7 +15,8 @@
 ``` 都是代码``` 
 
 来个引用，打开[Baidu](https://www.baidu.com)  
-可能要互相的调用怎么写？这样写[demo](tf.md) [心得](python_learn_fishc.txt)
+可能要互相的调用怎么写？这样写[demo](tf.md) [心得](python_learn_fishc.txt)  
+[110行](https://github.com/apang1945/littlebylittle/blob/cee00a63e8ada8eea998d8e391ea5c0f3b8f90be/Python/python_learn_mooc.txt#L110)
 
 [^_^]:(哈哈我是注释，不会在浏览器中显示。)(./GoPro/使用.md)
 
