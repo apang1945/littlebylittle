@@ -65,9 +65,9 @@ else:
       (2){:.2f}变量C填充到这个位置的时候取消小数点后两位
 turtle库的学习
 1.turtle.setup(width , height , startx , starty)//用于设置窗体的大小和位置
-Ps:(1)四个参数后两个可选，可写可不写eg:turtle.setup(800 , 400)生成一个长800宽400的窗体
-   (2)setup函数不是必须要有的
-2.坐标
+    Ps:(1)四个参数后两个可选，可写可不写eg:turtle.setup(800 , 400)生成一个长800宽400的窗体
+       (2)setup函数不是必须要有的
+2.坐标相关
     (1)绝对坐标
         turtle,goto(a , b)//绘制(0,0)到(a,b)的直线
     (2)相对坐标，相对于turtle的方向
@@ -75,10 +75,50 @@ Ps:(1)四个参数后两个可选，可写可不写eg:turtle.setup(800 , 400)生
         turtle.bk(d)//后退d个像素格子
         turtle.circle(r，angle)//转动角度走r个像素格子
 3.turtle.senth(angle)//改变海龟前进的方向或角度
-Ps:(1)只改变角度不会前进后退
-   (2)angle是绝对角度
-   (3)turtle.left(angle)
-      turtle.right(left)
+    Ps:(1)只改变角度不会前进后退
+       (2)angle是绝对角度
+       (3)turtle.left(angle)和turtle.right(left)
 4.RGB颜色库
-色彩模式有两种1.0-1的小数2.0-255的整数
-切换色彩模式
+    色彩模式有两种1.0-1的小数2.0-255的整数
+    切换色彩模式tuetle.color(mode)        //vscode在输入英文的时候间隔空格时的处理办法:中文状态下shift+空格键
+    mode -1.0:RGB小数值
+         -255:RGM整数值
+5.代码解释
+    import turtle
+    turtle.setup(650 , 350 , 200 , 200)
+    turtle.penup()
+    turtle.fd(-250)
+    turtle.pendown()
+    turtle.pensize(25)
+    turtle.pencolor("magenta")
+    turtle.seth(-40)
+    for i in range(4):
+        turtle.circle(40 , 80)
+        turtle.circle(-40 , 80)
+    turtle.circle(40 , 80/2)
+    turtle.fd(40)
+    turtle.circle(16 , 180)
+    turtle.fd(40 * 2/3)
+    tuetle.done()
+注释：
+    1.库的引用--使用import 保留字实现
+        import <库名>
+        <库名>.<函数名>(<函数参数>)
+    2.代码简化
+        之前需要输入多条turtle.<函数名>，太过于复杂，使用以下简化技巧
+        from turtle import*//利用from <库名> import*
+        setup(650 , 350 , 200 , 200)
+        penup()
+        fd(-250)
+        pendown()
+        pensize(25)
+        pencolor("magenta")
+        seth(-40)
+        for i in range(4):
+            circle(40 , 80)
+            circle(-40 , 80)
+        circle(40 , 80/2)
+        fd(40)
+        circle(16 , 180)
+        fd(40 * 2/3)
+        done()
