@@ -85,7 +85,7 @@ turtle库的学习
          -255:RGM整数值
 5.代码解释
     import turtle
-    turtle.setup(650 , 350 , 200 , 200)
+    turtle.setup(650, 350, 200, 200)
     turtle.penup()
     turtle.fd(-250)
     turtle.pendown()
@@ -93,32 +93,47 @@ turtle库的学习
     turtle.pencolor("magenta")
     turtle.seth(-40)
     for i in range(4):
-        turtle.circle(40 , 80)
-        turtle.circle(-40 , 80)
-    turtle.circle(40 , 80/2)
+        turtle.circle(40, 80)
+        turtle.circle(-40, 80)
+    turtle.circle(40, 80/2)
     turtle.fd(40)
-    turtle.circle(16 , 180)
+    turtle.circle(16, 180)
     turtle.fd(40 * 2/3)
     tuetle.done()
+6.画笔控制函数
+    (1)画笔操作后一直有效，一般都成对出现
+        -turtle.penup() 别名turtle.pu()
+        -turtle.pendown() 别名turtle.pd()
+        -turtle.pensize(width) 别名turtle.width(width)
+        -turtle.pencolor() 
+            --颜色字符串 
+                        -turtle.pencolor("purple")
+                        -turtle.pencolor(0.63, 0.13, 0.94)//修改参见81行
+                        -turtle.pencolor((0.63, 0.13, 0.94))//元组类型
+
 注释：
     1.库的引用--使用import 保留字实现
         import <库名>
         <库名>.<函数名>(<函数参数>)
     2.代码简化
-        之前需要输入多条turtle.<函数名>，太过于复杂，使用以下简化技巧
-        from turtle import*//利用from <库名> import*
-        setup(650 , 350 , 200 , 200)
-        penup()
-        fd(-250)
-        pendown()
-        pensize(25)
-        pencolor("magenta")
-        seth(-40)
-        for i in range(4):
-            circle(40 , 80)
-            circle(-40 , 80)
-        circle(40 , 80/2)
-        fd(40)
-        circle(16 , 180)
-        fd(40 * 2/3)
-        done()
+        (1)利用from <库名> import*
+            之前需要输入多条turtle.<函数名>，太过于复杂，使用以下简化技巧
+            from turtle import*
+            setup(650, 350, 200, 200)
+            penup()
+            fd(-250)
+            pendown()
+            pensize(25)
+            pencolor("magenta")
+            seth(-40)
+            for i in range(4):
+                circle(40, 80)
+                circle(-40, 80)
+            circle(40, 80/2)
+            fd(40)
+            circle(16, 180)
+            fd(40 * 2/3)
+            done()
+        (2)利用import和as保留字共同完成
+            import <库名> as <库别名>
+            <库别名>.<函数名>(<函数参数>)
