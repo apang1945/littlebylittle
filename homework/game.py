@@ -1,5 +1,5 @@
 import random
-secret = random.randint(1,10)
+secret = random.randint(1,10)#生成一个随机数
 print('......"我爱鱼c工作室"......')
 print("......\"我爱鱼c工作室\"......")
 times = 1
@@ -21,7 +21,7 @@ else:
         if guess == secret:
             print("wocao,你是小甲鱼心里的蛔虫吗？！")
             print("wuqing，哼，猜中了也没有奖励！")
-            times == 5
+            times = 5
         else:
             if guess < secret:
                 print ("猜小啦")
