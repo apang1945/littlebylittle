@@ -2,7 +2,7 @@
 Ps:两种保留位数的方法
     1."{:.2f}".format(a)
     2.'%.2f' %a
-'''
+///
 r = 25
 area = 3.1415 * r * r
 print(area)
@@ -11,11 +11,11 @@ print("{:.2f}".format(area))
 1963.44
 print('%.2f' %area)
 1963.44
-'''
+///
 实例2(同切圆绘制)
 Ps:要注意数据的类型，input输入的是整型，在绘制圆的时候需要Π的引入，Π是无理数，所以要进行格式转换
     eg:float(a)
-'''
+///
 size = input('请输入画笔的粗细:')
 a = input('请输入所要画的圆的半径:')
 r = float(a)
@@ -25,13 +25,13 @@ turtle.circle(r)
 turtle.circle(r * 4)
 turtle.circle(r * 8)
 turtle.circle(r * 16)
-'''
+///
 实例3(五角星绘制)
 Ps:
 ^_^
 待补充
 ^~^
-、、、
+///
 from turtle import *
 color('red' , 'red')
 begin_fill()
@@ -40,14 +40,23 @@ for i in range(5):
     rt(144)
 
 end_fill()
-、、、
+///
 Python第一段代码(包含代码解读):
-TempStr = input('请输入带有符号的温度值：')#
+///
+TempStr = input('请输入带有符号的温度值：')
 if TempStr[-1] in ['F','f']:
-    C = (eval(TempStr[0 : -1]) - 3255)/1.8
+    C = (eval(TempStr[0 : -1]) - 32)/1.8
     print('转换后的温度是{:.2f}C'.format(C))
 elif TempStr[-1] in ['C','c']:
     F = 1.8*eval(TempStr[0 : -1]) + 32
     print('转换后的温度是{:.2f}F'.format(F))
 else:
     print('输入格式错误')
+///
+注解:1.利用input输入要计算的数值，input()函数用法如下：input（''提示要输入的信息：'')
+     2.TempStr[-1]表示数据的位置。在python中，数据方式排列的有两种。
+     一种是正向递增。如数据S=12345，S[0]为1，S[2]为2。另一种是逆向递减,S[-1]为5，S[-2]为4.
+     3.eval(TempStr[0 : -1])
+     eval（）函数是去掉最外层侧的引号，eval('123')将字符串变为整数123.
+     TempStr[0:-1]表示取该数据的某个范围，当所取数据从TempStr[0]开始，不到TempStr[-1].
+     举一反三：[0:]指取所有数据，[:-1]指取除了最后一个数据的所有数据。
