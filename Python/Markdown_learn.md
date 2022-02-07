@@ -13,7 +13,14 @@
 使用`git status`是可以打印状态列表。
 
 ``` 都是代码``` 
-
+```
+r = 25
+area = 3.1415 * r * r
+print(area)
+1963.4375000000002
+print("{:.2f}".format(area))
+print('%.2f' %area)
+```
 来个引用，打开[Baidu](https://www.baidu.com)  
 可能要互相的调用怎么写？这样写[demo](tf.md) [fishc](python_learn_fishc.txt) [mooc](python_learn_mooc.txt)
 
