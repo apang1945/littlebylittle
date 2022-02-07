@@ -1,6 +1,17 @@
 写在开头:这是我自己为了好好学习Python写的笔记，有一些地方可能没有写的完全，仅代表个人理解
     (1)Windows的cmd命令打开py文件的办法:输入cd(打开文件夹命令) eg:cd desktop\py 然后dir(用来显示文件夹的所有文件) 然后执行py文件 eg:python PythonDraw.py
     (2)Windows终端换盘的指令，原来在C盘想换到D盘，直接输入D:
+1.字符串处理方法
+    (1)name.tilte() --- 将name包含的内容首字母大写
+    (2)name.upper() --- 将name包含的内容全部大写
+    (3)name.lower() --- 将name包男的字母全部小写
+2.删除空白方法restrip(),只是暂时的
+    name = "python "
+    name.rstrip() 得到的答案为:python
+    name = " python "
+    name.lstrip() 得到的答案为:python (有空格)
+    name.strip() 得到的答案为:python
+
 实例1(圆面积计算)
 Ps:两种保留位数的方法
     1."{:.2f}".format(a)
