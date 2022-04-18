@@ -11,7 +11,9 @@
     name = " python "
     name.lstrip() 得到的答案为:python (有空格)
     name.strip() 得到的答案为:python
+    name.restrip() 得到的答案为: python
 3.列表
+    1.索引从0开始；但最后一个元素可表示为-1
 
 实例1(圆面积计算)
 Ps:两种保留位数的方法
@@ -133,7 +135,7 @@ turtle库的学习
             (2)angle是绝对角度
             (3)turtle.left(angle)和turtle.right(left)
 8.循环语句:
-    使用<for <变量> in range (<参数>)
+    使用<for <变量> in range (<参数>):
         <被循环执行的语句>
     Ps:
         (1)循环次数即为参数，范围是0 ~ (参数-1)
